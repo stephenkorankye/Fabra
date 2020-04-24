@@ -55,7 +55,8 @@ router.get('/signup',isLoggedout,(req,res,next)=>{
 })
 
 //login endpoint
-router.get('/login', isLoggedin,(req,res,next)=>{
+router.get('/login', isLoggedout,(req,res,next)=>{
+    console.log("Logging in ");
     res.render('routes_UI/login');
 })
 
@@ -204,7 +205,7 @@ router.get('/', (req,res)=>{
 
     Product.find().then((products)=>{
         let productChunks= [];
-        const chunkSize= r;
+        const chunkSize= 4;
         for(let i=0; i<products.length; i +=chunkSize){
             productChunks.push(products.slice(i,i+chunkSize));
         }
