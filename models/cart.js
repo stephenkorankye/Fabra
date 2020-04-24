@@ -1,9 +1,10 @@
+//cart utilities
 module.exports=function Cart(oldCart){
     this.items= oldCart.items || {};
     this.totalQty= oldCart.totalQty || 0;
     this.totalPrice= oldCart.totalPrice || 0;
-    this.itemsArray= oldCart.itemsArray || [];
-    
+    this.itemsArray= oldCart.itemsArray  || [];
+
     this.add= function(item, id){
         let storedItem= this.items[id];
         if(!storedItem){
@@ -14,7 +15,7 @@ module.exports=function Cart(oldCart){
         this.totalQty++;
         this.totalPrice += storedItem.item.price;
     };
-    
+
     this.reduceByOne= function(id){
         
         let storedItem= this.items[id];
@@ -63,7 +64,7 @@ module.exports=function Cart(oldCart){
             }
         }
     }
-    
+
     this.generateArray= () =>{
         var arr= [];
         for(let id in this.items){
@@ -72,4 +73,3 @@ module.exports=function Cart(oldCart){
         this.itemsArray= arr;
     };
 }
-
