@@ -2,6 +2,6 @@
 
 
 module.exports = {
-    mongoURI: "mongodb+srv://Stephen:stephenOnFabraServices@fabra-dysrw.mongodb.net/test?retryWrites=true&w=majority"
+    mongoURI: "mongodb+srv://Stephen:passwordHere@fabra-dysrw.mongodb.net/test?retryWrites=true&w=majority"
 };
 
