@@ -1,0 +1,40 @@
+{
+  "name": "fabra-services",
+  "version": "1.0.0",
+  "description": "Stephen on Fabra",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kelvin-tech/Fabra.git"
+  },
+  "keywords": [
+    "Fabra"
+  ],
+  "author": "https://github.com/stephenkorankye",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kelvin-tech/Fabra/issues"
+  },
+  "homepage": "https://github.com/kelvin-tech/Fabra#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "connect-flash": "^0.1.1",
+    "contentful": "^7.14.4",
+    "ejs": "^3.1.2",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
+    "express-session": "^1.17.1",
+    "mongodb": "^3.5.7",
+    "mongoose": "^5.9.12",
+    "multer": "^1.4.2",
+    "nodemon": "^2.0.3",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0"
+  }
+}

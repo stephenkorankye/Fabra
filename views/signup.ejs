@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>FABRA.COM | Signup Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- MATERIAL DESIGN ICONIC FONT -->
+    <link
+      rel="stylesheet"
+      href="/fonts/material-design-iconic-font/css/material-design-iconic-font.css"
+    />
+
+    <!-- STYLE CSS -->
+	<link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+	<script src="https://kit.fontawesome.com/bf1ba5d382.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/assets/css/signup-page-css.css" />
+	<link rel="stylesheet" href="/main/index.css" /> 
+  </head>
+
+  <body>
+    <div class="wrapper">
+		<div class="bg-overlay"></div>
+		
+      <form action="/users/register" method="POST" id="wizard" >
+        <!-- SECTION 1 -->
+        <h2></h2>
+        <section>
+          <div class="inner">
+            <div class="image-holder">
+              <img src="/assets/img/homeshopper2.jpg" alt="" />
+            </div>
+            <div class="form-content">
+              <div class="form-header">
+				<div class="row">
+					<div class="col-12 mb-1"><img src="/assets/img/fabra-logo.png" alt="" ></div>
+					<div class="col-12 "> <h3>SIGN UP</h3></div>
+				</div>			  
+               
+              </div>
+              <p>Please fill with your details</p>
+              <div class="form-row">
+                <div class="form-holder">
+                  <input
+                    type="text"
+                    placeholder="First Name"
+                    class="form-control"
+					name="firstname"
+                  />
+                </div>
+                <div class="form-holder">
+                  <input
+                    type="text"
+                    placeholder="Last Name"
+                    class="form-control"
+					name="lastname"
+                  />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-holder">
+                  <input
+                    type="email"
+                    placeholder="Your Email"
+                    class="form-control"
+					name="email"
+                  />
+                </div>
+                <div class="form-holder">
+                  <input
+                    type="number"
+                    placeholder="Phone Number"
+                    class="form-control"
+					name="phone"
+                  />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-holder">
+                  <input 
+					type="date" 
+					placeholder="Date of Birth"
+					class="form-control" 
+					name="date"
+				/>
+                </div>
+                <div
+                  class="form-holder"
+                  style="align-self: flex-end; transform: translateY(4px);"
+                >
+                  <div class="checkbox-tick" id="getCheckBoxes">
+                    <label class="male">
+                      <input type="radio" name="gender" value="male" checked />
+                      Male<br />
+                      <span class="checkmark"></span>
+                    </label>
+                    <label class="female">
+                      <input type="radio" name="gender" value="female" />
+                      Female<br />
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-holder">
+                  <input 
+					type="password"
+					placeholder="Password"
+					class="form-control"
+					name="password"
+					
+				/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 2 -->
+        <h2></h2>
+        <section>
+          <div class="inner">
+            <div class="image-holder">
+              <img src="/assets/img/business-woman2.jpg" alt="" />
+            </div>
+            <div class="form-content">
+              <div class="form-header">
+                <div class="row">
+					<div class="col-12 mb-1"><img src="/assets/img/fabra-logo.png" alt="" ></div>
+					<div class="col-12 "> <h3>SIGN UP</h3></div>
+				</div>
+              </div>
+              <p>Please fill with additional info</p>
+              <div class="form-row">
+                <div class="form-holder w-100">
+					<div class="select">
+						<div class="form-holder">
+						  <div class="select-control">Your Region</div>
+						 
+						  <input class="regionHere" name="finalRegion" style="display:none" value="">
+					
+							
+						  <i class="zmdi zmdi-caret-down"></i>
+						</div>
+						<ul class="dropdown">
+						  <li rel="Greater Accra Region" name="region" class="region" value="Greater Accra" >Greater Accra</li>
+						  <li rel="Ashanti Region" name="region" class="region" value="Ashanti Region" >Ashanti</li>
+						  <li rel="Brong Ahafo Region" name="region" class="region" value="BrongAhafo Region" >Brong Ahafo</li>
+						</ul>
+					  </div>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-holder" style="margin-right: 0em;">
+					<div class="select">
+						<div class="form-holder">
+						  <div class="select-control">Your City</div>
+						  <input class="cityHere" name="finalCity" style="display:none" value="" > 
+							
+						  <i class="zmdi zmdi-caret-down"></i>
+						</div>
+						<ul class="dropdown">
+						  <li rel="Accra" name="city" class="city" value="Accra" >Accra</li>
+						  <li rel="Kumasi" name="city" class="city" value="Kumasi">Kumasi</li>
+						  <li rel="Sunyani" name="city" class="city" value="Sunyani">Sunyani</li>
+						</ul>
+					  </div>                
+			  </div>
+			  <div class="form-holder">
+				<input
+				  type="text"
+				  placeholder="House Number"
+				  class="form-control"
+				  name="housenumber"
+				/>
+			  </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 3 -->
+        <!-- <h2></h2>
+        <section>
+          <div class="inner">
+            <div class="image-holder">
+              <img src="/assets/img/deliveryman2.jpg" alt="" />
+            </div>
+            <div class="form-content">
+              <div class="form-header">
+				<div class="row">
+					<div class="col-12 mb-1"><img src="/assets/img/fabra-logo.png" alt="" ></div>
+					<div class="col-12 "> <h3>SIGN UP</h3></div>
+				</div> 
+              </div>
+              <p>Upload a profile picture</p>
+              <div class="form-row" enctype="multipart/form-data">
+                <div class="form-holder w-100 d-flex justify-content-center align-items-center">
+					  <div class="upload-btn-wrapper">
+						<button class="btn btn-outline-primary btn-lg"> <i class="fas fa-image" aria-hidden="true"></i> Click Here To Upload</button>
+						<input 
+							id="file"
+							type="file"
+							accept="image/*" 
+							name="steve" 
+						/>
+					  </div>
+                </div> 
+              </div>             
+            </div>
+          </div>
+        </section> -->
+
+        <!-- SECTION 4 -->
+        <h2></h2>
+        <section>
+          <div class="inner">
+            <div class="image-holder">
+              <img src="/assets/img/deliveryman3.jpg" alt="" />
+            </div>
+            <div class="form-content">
+              <div class="form-header">
+				<div class="row">
+					<div class="col-12 mb-1"><img src="/assets/img/fabra-logo.png" alt="" ></div>
+					<div class="col-12 "> <h3>SIGN UP</h3></div>
+				</div>
+              </div>
+              <p>Chooose your account type</p>
+              <div
+                class="container d-flex justify-content-center align-items-center"
+              >
+              
+                <div class="row grid-two imageandtext">
+                  <div class="col-4 imageandtext image_grid">
+                    <label>
+                      <img src="/assets/img/homeshopper.jpg" class="img-thumbnail" />
+                      <input type="radio" name="uType" value="Customer" checked />
+                      <span class="caption">
+                        <span class="font-weight-bold">Customer</span>
+                      </span>
+                    </label>
+                  </div>
+
+                  <div class="col-4 imageandtext image_grid">
+                    <label>
+                      <img
+                        src="/assets/img/business-woman.jpg"
+                        class="img-thumbnail"
+                      />
+                      <input type="radio" name="uType" value="Shop Owner" />
+                      <span class="caption">
+                        <span class="font-weight-bold">Shop Owner</span>
+                      </span>
+                    </label>
+                  </div>
+
+                  <div class="col-4 imageandtext image_grid">
+                    <label>
+                      <img src="/assets/img/deliveryman.jpg" class="img-thumbnail" />
+                      <input type="radio" name="uType" value="Delivery Person" />
+                      <span class="caption">
+                        <span class="font-weight-bold"> Delivery Guy </span>
+                      </span>
+                    </label>
+                  </div>
+                </div>
+				  
+              </div>
+            </div>
+          </div>
+		  
+        </section>
+      </form>
+	  
+    </div>
+	
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script src="/main/index.js"> </script>
+	<script>
+
+	</script>
+    <!-- JQUERY -->
+    <script src="/assets/js/jquery-3.3.1.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+
+    <!-- JQUERY STEP -->
+    <script src="/assets/js/jquery.steps.js"></script>
+    <script src="/assets/js/signup.js"></script>
+  </body>
+</html>

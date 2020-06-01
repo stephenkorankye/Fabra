@@ -1,0 +1,59 @@
+
+
+#submitBtn {
+	position: absolute;
+	bottom: 55px;
+	right: 51px;
+	z-index: 100 ;
+	background: blue ;
+	display:flex ;
+	border:none ;
+	outline:none ;
+	padding: 0;
+	border: none;
+	align-items:center ;
+	display: inline-flex;
+	height: 41px;
+	width: 135px;
+	/*background: #cc3333;*/
+	background-color: blue ;
+	font-family: "Montserrat-Regular";
+	color: #fff;
+	cursor: pointer;
+	padding-left: 28px;
+	
+}
+
+
+#submitBtn a {
+	padding: 0;
+	border: none;
+	align-items:center ;
+	display: inline-flex;
+	height: 41px;
+	width: 135px;
+	/*background: #cc3333;*/
+	background-color: blue ;
+	font-family: "Montserrat-Regular";
+	color: #fff;
+	cursor: pointer;
+	padding-left: 28px;
+}
+
+@media screen and (max-width: 767px) {
+	.submitBox {
+		position:relative ;
+		height:300px ;
+		background-color:white  ;
+		z-index:100 ;
+		
+	}
+	#submitBtn {
+		position:absolute ;
+		right: 50%;
+		transform: translateX(50%);
+		bottom: 70%;
+}
+
+
+

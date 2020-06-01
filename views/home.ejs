@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>FABRA.COM | On The Way.</title>
+    <!-- SEO Meta Tags-->
+    <meta name="description" content="FABRA.COM - Online delivery services.">
+    <meta name="keywords" content="ghana shop, shop, e-commerce, modern,, online store, ghana, online shopping, delivery">
+    <meta name="author" content="FABRA.COM">
+    <!-- Mobile Specific Meta Tag-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- Favicon and Apple Icons-->
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Vendor Styles including: Bootstrap, Font Icons, Plugins, etc.-->
+    <link rel="stylesheet" media="screen" href="css/vendor.min.css">
+    <!-- Main Template Styles-->
+    <link id="mainStyles" rel="stylesheet" media="screen" href="css/styles.min.css">
+    <!-- Modernizr-->
+    <script src="/js/modernizr.min.js"></script>
+  </head>
+  <!-- Body-->
+  <body>   
+    <!-- Off-Canvas Nav Menu-->
+    <div class="offcanvas-container" id="shop-categories">
+      <div class="container-fluid p-0">
+        <a class="account-link" href="/account">
+          <div class="user-ava"><img src="img/account/user-ava-md.jpg" alt=" User ">
+          </div>
+          <div class="user-info">
+            <h6 class="user-name"> <%= User.firstname + " "  + User.lastname %> </h6><span class="text-sm text-white"> <%= User.userType %> </span>
+          </div>
+        </a>
+      </div>
+      <nav class="offcanvas-menu">
+        <ul class="menu">          
+          <li class="has-children"><span><a href="/account">My Account</a><span class="sub-menu-toggle"></span></span>
+            <ul class="offcanvas-submenu">
+              <li><a href="/account">Profile Details</a></li>
+              <li><a href="#">Address</a></li>
+            </ul>
+          </li>
+          <li ><span><a href="#">My Favourite Shops</a><span class="sub-menu-toggle"></span></span>
+            
+          </li>
+          <li><span><a href="#">My Cart History</a><span class="sub-menu-toggle"></span></span>
+            
+          </li>
+        </ul>
+      </nav>
+      <div class="offcanvas-header">
+        <h3 class="offcanvas-title">Quick Links</h3>
+      </div>
+      <nav class="offcanvas-menu">
+        <ul class="menu">
+          <li class="has-children"><span><a href="#">FAQs</a><span class="sub-menu-toggle"></span></span>
+            <ul class="offcanvas-submenu">
+              <li><a href="#">Question 1</a></li>
+              <li><a href="#">Question 1</a></li>
+              <li><a href="#">Question 1</a></li>
+              <li><a href="#">Question 1</a></li>
+              <li><a href="#">Question 1</a></li>
+            </ul>
+          </li>
+          <li><span><a href="#">Contact Us</a><span class="sub-menu-toggle"></span></span>            
+          </li>         
+        </ul>
+      </nav>
+    </div>
+    <!-- Off-Canvas Mobile Menu-->
+    <div class="offcanvas-container" id="mobile-menu">
+      <a class="account-link" href="/account">
+        <div class="user-ava"><img src="/img/account/user-ava-md.jpg" alt=" User ">
+        </div>
+        <div class="user-info">
+          <h6 class="user-name"> <%= User.firstname + " "  + User.lastname %> </h6><span class="text-sm text-white opacity-60"> <%= User.userType %> </span>
+        </div>
+      </a>
+      <nav class="offcanvas-menu">
+        <ul class="menu">          
+          <li class="has-children"><span><a href="/account">My Account</a><span class="sub-menu-toggle"></span></span>
+            <ul class="offcanvas-submenu">
+              <li><a href="#">Profile Details</a></li>
+              <li><a href="#">Address</a></li>
+            </ul>
+          </li>
+          <li ><span><a href="#">My Favourite Shops</a><span class="sub-menu-toggle"></span></span>
+            
+          </li>
+          <li><span><a href="#">My Cart History</a><span class="sub-menu-toggle"></span></span>
+            
+          </li>
+        </ul>
+      </nav>
+      <div class="offcanvas-header">
+        <h3 class="offcanvas-title">Quick Links</h3>
+      </div>
+      <nav class="offcanvas-menu">
+        <ul class="menu">
+          <li class="has-children"><span><a href="#">FAQs</a><span class="sub-menu-toggle"></span></span>
+            <ul class="offcanvas-submenu">
+              <li><a href="#">Question 1</a></li>
+              <li><a href="#">Question 1</a></li>
+              <li><a href="#">Question 1</a></li>
+              <li><a href="#">Question 1</a></li>
+              <li><a href="#">Question 1</a></li>
+            </ul>
+          </li>
+          <li><span><a href="#">Contact Us</a><span class="sub-menu-toggle"></span></span>            
+          </li>         
+        </ul>
+      </nav>
+    </div>
+    <!-- Navbar-->
+    <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page.-->
+    <header class="navbar navbar-sticky fixed-top">
+      <!-- Search-->
+      <form class="site-search" method="get">
+        <input type="text" name="site_search" placeholder="Type to search...">
+        <div class="search-tools"><span class="clear-search">Clear</span><span class="close-search"><i class="icon-cross"></i></span></div>
+      </form>
+      <div class="site-branding">
+        <div class="inner">
+          <!-- Off-Canvas Toggle (#shop-categories)--><a class="offcanvas-toggle cats-toggle" href="#shop-categories" data-toggle="offcanvas"></a>
+          <!-- Off-Canvas Toggle (#mobile-menu)--><a class="offcanvas-toggle menu-toggle" href="#mobile-menu" data-toggle="offcanvas"></a>
+          <!-- Site Logo--><a class="site-logo" href="user-home.html#"><img src="/img/logo/fabralogo.png" alt="FABRA.COM"></a>
+        </div>
+      </div>     
+      <!-- Toolbar-->
+      <div class="toolbar">
+        <div class="inner">
+          <div class="tools">
+            <div class="search"><i class="icon-search"></i></div>
+            <div class="account"><a href="/account"></a><img src="/img/account/user-ava-sm.jpg" alt=" User">
+              <ul class="toolbar-dropdown">
+                <li class="sub-menu-user">
+                  <div class="user-ava"><img src="/img/account/user-ava-sm.jpg" alt=" User ">
+                  </div>
+                  <div class="user-info">
+                    <h6 class="user-name"> <%= User.firstname + " "  + User.lastname %> </h6><span class="text-xs text-muted"> <%= User.userType %> </span>
+                  </div>
+                </li>
+                  <li><a href="/account">My Profile</a></li>
+                  <li><a href="#">Orders List</a></li>
+                  <li><a href="#">Wishlist</a></li>
+                <li class="sub-menu-separator"></li>
+                <li><a href="/users/logout"> <i class="icon-unlock"></i>Logout</a></li>
+              </ul>
+            </div>
+            <div class="cart"><a href="#"></a><i class="icon-bag"></i><span class="count">3</span><span class="subtotal"> GH¢0.00 </span>
+              <div class="toolbar-dropdown">
+                <div class="dropdown-product-item"><span class="dropdown-product-remove"><i class="icon-cross"></i></span><a class="dropdown-product-thumb" href="#"><img src="img/cart-dropdown/01.jpg" alt="Product"></a>
+                  <div class="dropdown-product-info"><a class="dropdown-product-title" href="#">Unionbay Park</a><span class="dropdown-product-details">1 x GHC43.90</span></div>
+                </div>
+                <div class="dropdown-product-item"><span class="dropdown-product-remove"><i class="icon-cross"></i></span><a class="dropdown-product-thumb" href="#"><img src="img/cart-dropdown/02.jpg" alt="Product"></a>
+                  <div class="dropdown-product-info"><a class="dropdown-product-title" href="#">Daily Fabric Cap</a><span class="dropdown-product-details">2 x GHC24.89</span></div>
+                </div>
+                <div class="dropdown-product-item"><span class="dropdown-product-remove"><i class="icon-cross"></i></span><a class="dropdown-product-thumb" href="#"><img src="img/cart-dropdown/03.jpg" alt="Product"></a>
+                  <div class="dropdown-product-info"><a class="dropdown-product-title" href="#">Haan Crossbody</a><span class="dropdown-product-details">1 x GHC200.00</span></div>
+                </div>
+                <div class="toolbar-dropdown-group">
+                  <div class="column"><span class="text-lg">Total:</span></div>
+                  <div class="column text-right"><span class="text-lg text-medium">GHC289.68&nbsp;</span></div>
+                </div>
+                <div class="toolbar-dropdown-group">
+                  <div class="column"><a class="btn btn-sm btn-block btn-secondary" href="#">View Cart</a></div>
+                  <div class="column"><a class="btn btn-sm btn-block btn-primary" href="#">Checkout</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Off-Canvas Wrapper-->
+    <div class="offcanvas-wrapper">
+      <!-- Page Content-->
+      <!-- Main Slider-->
+      <section class="hero-slider">
+        <div class="owl-carousel large-controls dots-inside" data-owl-carousel="{ &quot;nav&quot;: true, &quot;dots&quot;: true, &quot;loop&quot;: true, &quot;autoplay&quot;: true, &quot;autoplayTimeout&quot;: 7000 }">
+          <div class="item">
+            <section class="section">
+              <div class="container-fluid px-0 bg-red bg-md-light">
+                <div class="row"> 
+                  <div class="col-md-6 order-md-2">
+                    <div>
+                      <img alt="Order anything" class="img-fluid" src="img/hero-slider/01.jpg" />
+                    </div>
+                  </div>                
+                  <div class="col-md-6 col-lg-5 order-md-1 mx-auto px-md-5 d-flex align-items-center mt-1 mt-md-4 mt-md-0 text-center text-md-left">
+                    <div>
+                      <h1 class="display-md-2 mb-1 text-white text-md-dark">Order any item at affordable prices.</h1>
+                      <p class="display-md-4 text-white text-md-dark">Our shelves are stocked.</p>
+                    </div>
+                  </div>                  
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="item">
+            <section class="section">
+              <div class="container-fluid px-0 bg-red bg-md-light">
+                <div class="row"> 
+                  <div class="col-md-6 order-md-2">
+                    <div>
+                      <img alt="Order anything" class="img-fluid" src="img/hero-slider/02.jpg" />
+                    </div>
+                  </div>                
+                  <div class="col-md-6 col-lg-5 order-md-1 mx-auto px-md-5 d-flex align-items-center mt-1 mt-md-4 mt-md-0 text-center text-md-left">
+                    <div>
+                      <h1 class="display-md-2 mb-1 text-white text-md-dark">Pay any way you possibly can.</h1>
+                      <p class="display-md-4 text-white text-md-dark">We support all kinds of payment methods.</p>
+                    </div>
+                  </div>                  
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="item">
+            <section class="section">
+              <div class="container-fluid px-0 bg-red bg-md-light">
+                <div class="row"> 
+                  <div class="col-md-6 order-md-2">
+                    <div>
+                      <img alt="Order anything" class="img-fluid" src="img/hero-slider/03.jpg" />
+                    </div>
+                  </div>                
+                  <div class="col-md-6 col-lg-5 order-md-1 mx-auto px-md-5 d-flex align-items-center mt-1 mt-md-4 mt-md-0 text-center text-md-left">
+                    <div>
+                      <h1 class="display-md-2 mb-1 text-white text-md-dark">Get your package right on time.</h1>
+                      <p class="display-md-4 text-white text-md-dark">Anywhere you are.</p>
+                    </div>
+                  </div>                  
+                </div>
+              </div>
+            </section>
+          </div>
+          
+         
+        </div>
+      </section>
+      <!-- Shopping Area -->
+      <div class="container-fluid mt-2 padding-bottom-3x mb-1">
+        <div class="row">
+          <!-- Products-->
+          <div class="col-xl-9 col-lg-8 order-lg-2">
+            <!-- Shop Toolbar-->
+            <div class="shop-toolbar padding-bottom-1x mb-2">
+              <div class="column">
+                <div class="shop-sorting">
+                  <label for="sorting">Sort by:</label>
+                  <select class="form-control" id="sorting">
+                    <option>Popularity</option>
+                    <option>Low - High Price</option>
+                    <option>High - Low Price</option>
+                    <option>Avarage Rating</option>
+                    <option>A - Z Order</option>
+                    <option>Z - A Order</option>
+                  </select><span class="text-muted">Showing:&nbsp;</span><span>1 - 12 items</span>
+                </div>
+              </div>
+              <div class="column">
+                <div class="shop-view"><a class="grid-view active" href="user-home.html#"><span></span><span></span><span></span></a><a class="list-view" href="home-list.html"><span></span><span></span><span></span></a></div>
+              </div>
+            </div>
+            <!-- Products Grid-->
+            <div class="isotope-grid cols-3 mb-2">
+              <div class="gutter-sizer"></div>
+              <div class="grid-sizer"></div>
+              
+			  
+			  
+              <!-- Product-->
+			  
+			  <% for ( let i  = 1 ; i < homeData.length; i += Math.floor(homeData.length / 12)) { %>
+					<% let imageSrc  ; %>
+					<% if (homeData[i].fields.image) { %>
+					<% imageSrc = homeData[i].fields.image.fields.file.url } %>
+					<% if (homeData[i].fields.image == undefined){ %>
+					<% imageSrc = homeData[i].fields.images.fields.file.url } %>
+				  <div class="grid-item">
+					<div class="card mb-1 ">
+					  <div class="card-image">
+						<span class="card-notify-badge"> </span>
+						<span class="card-notify-year"> GH¢<%=homeData[i].fields.price%> </span>
+						<img alt="" class="card-img-top img-fluid" src="https:<%= imageSrc %>" style="display: block;">
+					  </div>
+					  <div class="card-body">
+						<h5 class="card-title"> <%= homeData[i].fields.name%> </h5>
+						<p class="card-text">
+						
+							<% let contentDesc ; %>
+							<% if ( homeData[i].fields.aboutProduct) { %>
+							<% contentDesc = homeData[i].fields.aboutProduct.content[0].content[0].value }%> 
+							<% if (homeData[i].fields.aboutPhone) { %>
+							<%  contentDesc = homeData[i].fields.aboutPhone.content[0].content[0].value } %>
+							
+							
+							
+							<%= contentDesc.substring(0, 50) + "..." %>
+						</p>
+						<div class="d-flex justify-content-between align-items-center">
+						  <small class="btn btn-sm btn-outline-primary no-hover" data-toggle="tooltip" title="" data-original-title="Estimated delivery time">
+							<span class="estimated-delivery-time">9 Mins</span>
+						  </small>
+						  <div class="btn-group">
+							<a href="#" type="button" class="btn btn-sm btn-outline-secondary">
+							  View
+							</a>
+							<button data-toast="" data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="is added to cart!" class="btn btn-sm btn-outline-primary">
+							  Order
+							</button>
+						  </div>
+						</div>
+					  </div>
+					</div>
+				  </div>
+				 
+			<% } %>
+            
+          
+            </div>
+            <!-- Pagination-->
+            <nav class="pagination">
+              <div class="column">
+                <ul class="pages">
+                  <li class="active"><a href="#">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li>...</li>
+                  <li><a href="#">12</a></li>
+                </ul>
+              </div>
+              <div class="column text-right hidden-xs-down"><a class="btn btn-outline-secondary btn-sm" href="#">Next&nbsp;<i class="icon-arrow-right"></i></a></div>
+            </nav>
+          </div>
+          <!-- Sidebar-->
+          <div class="col-xl-3 col-lg-4 order-lg-1">
+            <button class="sidebar-toggle position-left" data-toggle="modal" data-target="#modalShopFilters"><i class="icon-layout"></i></button>
+            <aside class="sidebar sidebar-offcanvas">
+              <!-- Widget Categories-->
+              <section class="widget widget-categories">
+                <h3 class="widget-title">Sections</h3>
+                <ul>
+                  <li class="has-children"><a href="#">Fast Food</a><span>(1138)</span>                    
+                        <ul>
+                          <li><a href="#">Full Meal</a></li>
+                          <li><a href="#">Snacks</a></li>
+                          <li><a href="#">Drinks</a></li>
+                        </ul>
+                  </li>
+                  <li class="has-children"><a href="#">Groceries</a><span>(874)</span>
+                    <ul>
+                      <li><a href="#">Vegetables</a><span>(211)</span></li>
+                      <li><a href="#">Tubers</a><span>(195)</span></li>
+                      <li><a href="#">Cereals</a><span>(159)</span></li>
+                      <li><a href="#">Spices</a><span>(203)</span></li>
+                    </ul>
+                  </li>
+                  <li class="has-children"><a href="#">Clothes</a><span>(420)</span>
+                    <ul>
+                      <li><a href="#">Trousers &amp; Jeans</a><span>(180)</span></li>
+                      <li><a href="#">Shirts</a><span>(132)</span></li>
+                    </ul>
+                  </li>
+                  <li class="has-children"><a href="#">Eductional Supplies</a><span>(874)</span>
+                    <ul>
+                      <li><a href="#">Books</a><span>(211)</span></li>
+                    </ul>
+                  </li>
+                  <li class="has-children"><a href="#">Traveling Tickets</a><span>(874)</span>
+                    <ul>
+                    </ul>
+                  </li>
+                  <li class="has-children"><a href="#">Electronics</a><span>(874)</span>
+                    <ul>
+                      <li><a href="#">Laptops</a><span>(211)</span></li>
+                      <li><a href="#">Phones</a><span>(195)</span></li>
+                      <li><a href="#">Desktops</a><span>(159)</span></li>
+                      <li><a href="#">Hardware</a><span>(203)</span></li>
+                      <li><a href="#">Accessories</a><span>(106)</span></li>
+                    </ul>
+                  </li>
+                  <li class="has-children"><a href="#">House Furniture &amp; Appliances</a><span>(874)</span>
+                    <ul>
+                    </ul>
+                  </li>
+                </ul>
+              </section>
+              <!-- Widget Price Range-->
+              <section class="widget widget-categories">
+                <h3 class="widget-title">Price Range</h3>
+                <form class="price-range-slider" method="post" data-start-min="1" data-start-max="2500" data-min="1" data-max="5000" data-step="1">
+                  <div class="ui-range-slider"></div>
+                  <footer class="ui-range-slider-footer">
+                    <div class="column">
+                      <button class="btn btn-outline-primary btn-sm" type="submit">Filter</button>
+                    </div>
+                    <div class="column">
+                      <div class="ui-range-values">
+                        <div class="ui-range-value-min">GH¢<span></span>
+                          <input type="hidden">
+                        </div>&nbsp;-&nbsp;
+                        <div class="ui-range-value-max">GH¢<span></span>
+                          <input type="hidden">
+                        </div>
+                      </div>
+                    </div>
+                  </footer>
+                </form>
+              </section>
+              <!-- Promo Banner-->
+              <section class="promo-box" style="background-image: url(/img/banners/business-woman.jpg);">
+                <!-- Choose between .overlay-dark (#000) or .overlay-light (#fff) with default opacity of 50%. You can overrride default color and opacity values via 'style' attribute.--><span class="overlay-dark" style="opacity: .45;"></span>
+                <div class="promo-box-content text-center padding-top-3x padding-bottom-2x">
+                  <h3 class="text-bold text-light text-shadow">Sell on<br> FABRA.COM</h3><a class="btn btn-sm btn-primary" href="#">Start Now</a>
+                </div>
+              </section>
+              <!-- Promo Banner 2-->
+              <section class="promo-box mt-5" style="background-image: url(/img/banners/delivery-guy-sm.jpg);">
+                <!-- Choose between .overlay-dark (#000) or .overlay-light (#fff) with default opacity of 50%. You can overrride default color and opacity values via 'style' attribute.--><span class="overlay-dark" style="opacity: .45;"></span>
+                <div class="promo-box-content text-center padding-top-3x padding-bottom-2x">
+                  <h3 class="text-bold text-light text-shadow">Become a<br> FABRA.COM<br> delivery guy</h3><a class="btn btn-sm btn-primary" href="#">Start Now</a>
+                </div>
+              </section>
+            </aside>
+          </div>
+        </div>
+      </div>      
+      <!-- Promo #2-->
+      <section class="container-fluid p-0 large-bottom-margin">
+        <div class="row justify-content-center">
+          <div class="col-lg-12">
+            <div class="fw-section rounded padding-top-4x padding-bottom-4x" style="background-image: url(img/banners/delivery-guy-lg.jpg);"><span class="overlay rounded" style="opacity: .5;"></span>
+              <div class="text-center">
+                <h2 class="display-2 text-bold text-white text-shadow">Work with us.</h2>
+                <h4 class="d-inline-block h2 text-normal text-white text-shadow border-default border-left-0 border-right-0 mb-4">Become a FABRA.COM delivery guy</h4><br><a class="btn btn-primary margin-bottom-none" href="contacts.html">Start Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Site Footer-->
+      <footer class="site-footer">        
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-6">
+              <!-- Contact Info-->
+              <section class="widget widget-light-skin">
+                <h3 class="widget-title">Get In Touch With Us</h3>
+                <p class="text-white">Phone: 030 123 4567</p>
+                <p class="text-white">Email: email@email.com</p>
+                <p class="text-white">Address: Somewhere, Ghana</p>
+                <h3 class="widget-title">Follow Us</h3>
+                <a class="social-button shape-circle sb-facebook sb-light-skin" href="#"><i class="socicon-facebook"></i></a>
+                <a class="social-button shape-circle sb-instagram sb-light-skin" href="#"><i class="socicon-instagram"></i></a>
+                <a class="social-button shape-circle sb-twitter sb-light-skin" href="#"><i class="socicon-twitter"></i></a>
+              </section>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <!-- About Us-->
+              <section class="widget widget-links widget-light-skin">
+                <h3 class="widget-title">About Us</h3>
+                <ul>
+                  <li><a href="#">About FABRA.COM</a></li>
+                  <li><a href="#">FAQs</a></li>
+                </ul>
+              </section>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <!-- Account / Shipping Info-->
+              <section class="widget widget-links widget-light-skin">
+                <h3 class="widget-title">Account &amp; Shipping Info</h3>
+                <ul>
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">Shipping Rates &amp; Policies</a></li>
+                  <li><a href="#">Refunds &amp; Replacements</a></li>
+                  <li><a href="#">Taxes</a></li>
+              </section>
+            </div>            
+            <div class="col-lg-3 col-md-6">
+              <!-- Mobile App Buttons-->
+              <section class="widget widget-light-skin">
+                <h3 class="widget-title">Our Mobile App</h3>
+                <p class="display-4 text-white  text-nowrap">Coming Soon!</p>
+              </section>
+            </div>
+          </div>
+          <hr class="hr-light mt-2 margin-bottom-2x">
+          <div class="row">
+            <div class="col-md-7 padding-bottom-1x">
+              <!-- Payment Methods-->
+              
+            </div>
+            <div class="col-md-5 padding-bottom-1x">
+              <div class="margin-top-1x hidden-md-up"></div>
+              <!--Subscription-->
+              <form class="subscribe-form" action="http://rokaux.us12.list-manage.com/subscribe/post?u=c7103e2c981361a6639545bd5&amp;amp;id=1194bb7544" method="post" target="_blank" novalidate>
+                <div class="clearfix">
+                  <div class="input-group input-light">
+                    <input class="form-control" type="email" name="EMAIL" placeholder="Your e-mail"><span class="input-group-addon"><i class="icon-mail"></i></span>
+                  </div>
+                  <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                  <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                    <input type="text" name="b_c7103e2c981361a6639545bd5_1194bb7544" tabindex="-1">
+                  </div>
+                  <button class="btn btn-primary" type="submit"><i class="icon-check"></i></button>
+                </div><span class="form-text text-sm text-white opacity-50">Subscribe to our Newsletter to receive early discount offers, latest news, sales and promo information.</span>
+              </form>
+            </div>
+          </div>
+          <!-- Copyright-->
+          <div class="row ">
+            <div class="col-12 d-flex justify-content-center flex-column">
+              <img class="img-fluid mb-0" src="img/logo/fabralogo-light.png" alt="fabralogo-light" data-at2x="img/logo/fabralogo-light.png" style="width: 240px;">
+              <p class="footer-copyright"> <script> document.write(new Date().getFullYear()) </script> FABRA.COM. All rights reserved.</p>              
+            </div>
+          </div>
+          
+        </div>
+      </footer>
+    </div>
+    <!-- Back To Top Button--><a class="scroll-to-top-btn" href="#"><i class="icon-arrow-up"></i></a>
+    <!-- Backdrop-->
+    <div class="site-backdrop"></div>
+    <!-- JavaScript (jQuery) libraries, plugins and custom scripts-->
+    <script src="/js/vendor.min.js"></script>
+    <script src="/js/scripts.min.js"></script>
+  </body>
+</html>
