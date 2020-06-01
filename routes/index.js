@@ -30,8 +30,8 @@ router.get('/dashboard', ensureAuthenticated, async (req, res) => {
 	
 	const contentful = require('contentful') ;
 	const client = contentful.createClient({
-	  space: 'lzhomq8upbtl',
-	  accessToken: 'jKHBCYLp65WHXEe0WE-xJ4zqx_AHORkEY3dtZuTTQxE'
+	  space: 'ID_HERE',
+	  accessToken: 'TOKEN_HERE'
 	})
 	
 	await client.getEntries()
