@@ -4,7 +4,7 @@
 <!-- Mirrored from themes.rokaux.com/unishop/v3.2.1/template-1/account-profile.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 May 2020 17:57:11 GMT -->
 <head>
     <meta charset="utf-8">
-    <title>My Profile
+    <title> User Profile
     </title>
     <!-- SEO Meta Tags-->
     <meta name="description" content="Unishop - Universal E-Commerce Template">
@@ -36,16 +36,16 @@
           <div class="user-ava"><img src="/img/account/user-ava-md.jpg" alt=" User ">
           </div>
           <div class="user-info">
-            <h6 class="user-name">Michelle Bitchin </h6><span class="text-sm text-white">Customer</span>
+            <h6 class="user-name"> <%= User.firstname + " " + User.lastname %> </h6><span class="text-sm text-white"> <%= User.userType %> </span>
           </div>
         </a>
       </div>
       <nav class="offcanvas-menu">
         <ul class="menu">          
-          <li class="has-children"><span><a href="#">My Account</a><span class="sub-menu-toggle"></span></span>
+          <li class="has-children"><span><a href="/account">My Account</a><span class="sub-menu-toggle"></span></span>
             <ul class="offcanvas-submenu">
-              <li><a href="account-profile.html">Profile Details</a></li>
-              <li><a href="#">Address</a></li>
+              <li><a href="/account">Profile Details</a></li>
+              <li><a href="/account/address">Address</a></li>
             </ul>
           </li>
           <li ><span><a href="#">My Favourite Shops</a><span class="sub-menu-toggle"></span></span>
@@ -81,15 +81,15 @@
         <div class="user-ava"><img src="img/account/user-ava-md.jpg" alt=" User ">
         </div>
         <div class="user-info">
-          <h6 class="user-name">Michelle Bitchin </h6><span class="text-sm text-white opacity-60">Customer</span>
+          <h6 class="user-name"> <%= User.firstname + " " + User.lastname %> </h6><span class="text-sm text-white opacity-60"> <%= User.userType %> </span>
         </div>
       </a>
       <nav class="offcanvas-menu">
         <ul class="menu">          
-          <li class="has-children"><span><a href="#">My Account</a><span class="sub-menu-toggle"></span></span>
+          <li class="has-children"><span><a href="/account">My Account</a><span class="sub-menu-toggle"></span></span>
             <ul class="offcanvas-submenu">
-              <li><a href="#">Profile Details</a></li>
-              <li><a href="#">Address</a></li>
+              <li><a href="/account">Profile Details</a></li>
+              <li><a href="/account/address">Address</a></li>
             </ul>
           </li>
           <li ><span><a href="#">My Favourite Shops</a><span class="sub-menu-toggle"></span></span>
@@ -131,7 +131,7 @@
         <div class="inner">
           <!-- Off-Canvas Toggle (#shop-categories)--><a class="offcanvas-toggle cats-toggle" href="#shop-categories" data-toggle="offcanvas"></a>
           <!-- Off-Canvas Toggle (#mobile-menu)--><a class="offcanvas-toggle menu-toggle" href="#mobile-menu" data-toggle="offcanvas"></a>
-          <!-- Site Logo--><a class="site-logo" href="user-home.html"><img src="img/logo/fabralogo.png" alt="FABRA.COM"></a>
+          <!-- Site Logo--><a class="site-logo" href="/dashboard"><img src="/img/logo/fabralogo.png" alt="FABRA.COM"></a>
         </div>
       </div>     
       <!-- Toolbar-->
@@ -139,20 +139,20 @@
         <div class="inner">
           <div class="tools">
             <div class="search"><i class="icon-search"></i></div>
-            <div class="account"><a href="/account"></a><img src="img/account/user-ava-sm.jpg" alt=" User ">
+            <div class="account"><a href="/account"></a><img src="/img/account/user-ava-sm.jpg" alt=" User ">
               <ul class="toolbar-dropdown">
                 <li class="sub-menu-user">
-                  <div class="user-ava"><img src="img/account/user-ava-sm.jpg" alt=" User ">
+                  <div class="user-ava"><img src="/img/account/user-ava-sm.jpg" alt=" User ">
                   </div>
                   <div class="user-info">
-                    <h6 class="user-name">  </h6><span class="text-xs text-muted">Customer</span>
+                    <h6 class="user-name">  </h6><span class="text-xs text-muted"> <%= User.userType %> </span>
                   </div>
                 </li>
-                  <li><a href="account-profile.html">My Profile</a></li>
+                  <li><a href="/account">My Profile</a></li>
                   <li><a href="#">Orders List</a></li>
                   <li><a href="#">Wishlist</a></li>
                 <li class="sub-menu-separator"></li>
-                <li><a href="#"> <i class="icon-unlock"></i>Logout</a></li>
+                <li><a href="/users/logout"> <i class="icon-unlock"></i>Logout</a></li>
               </ul>
             </div>
             <div class="cart"><a href="#"></a><i class="icon-bag"></i><span class="count">3</span><span class="subtotal">GHC289.68</span>
@@ -195,19 +195,19 @@
         <div class="row">
           <div class="col-lg-4">
             <aside class="user-info-wrapper">
-              <div class="user-cover" style="background-image: url(img/account/user-cover-img.jpg);">
-                <div class="info-label" data-toggle="tooltip" title="Customer">Customer</div>
+              <div class="user-cover" style="background-image: url(/img/account/user-cover-img.jpg);">
+                <div class="info-label" data-toggle="tooltip" title="Customer"> <%= User.userType %> </div>
               </div>
               <div class="user-info">
                 <div class="user-avatar"><a class="edit-avatar" href="#"></a><img src="img/account/user-ava.jpg" alt="User"></div>
                 <div class="user-data">
-                  <h4> <%= User.firstname + User.lastname %> </h4><span> Joined <%= new Date().getFullYear() %> <!-- WOULD CHANGE THIS LATER -->  </span>
+                  <h4> <%= User.firstname + " " +  User.lastname %> </h4><span> Joined <%= new Date().getFullYear() %> <!-- WOULD CHANGE THIS LATER -->  </span>
                 </div>
               </div>
             </aside>
             <nav class="list-group">
-              <a class="list-group-item active" href="account-profile.html"><i class="icon-head"></i>Profile</a>
-              <a class="list-group-item" href="account-address.html"><i class="icon-map"></i>Addresses</a>
+              <a class="list-group-item active" href="/account"><i class="icon-head"></i>Profile</a>
+              <a class="list-group-item" href="/account/address"><i class="icon-map"></i>Addresses</a>
             </nav>
           </div>
           <div class="col-lg-8">

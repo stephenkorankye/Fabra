@@ -92,17 +92,19 @@ router.post("/account" , ensureAuthenticated , async(req, res) => {
 				, lastname
 				, phone
 			} , (err, next) => {
-				if (err)
+				if (err) {
 					console.log("Error Updating: " , err)
-				else console.log(next)
+					res.render("account-profile" , { errMessage }) ;
+				}
+				else next
 			})
 		}catch(err) {
-			console.log("An Error: " , err) ;
+			throw `An Error: ${err} `  ;
 			errMessage = "Sorry, We Could Not Update Your Account Info , Please Try Again" ;
 			res.render("account-profile" , { errMessage }) ;
 		}
 		finally {
-			console.log("Details Updated") ;
+			res.redirect("/account") ;
 		}
 	}
 	else {
@@ -110,6 +112,57 @@ router.post("/account" , ensureAuthenticated , async(req, res) => {
 		res.render("account-profile" , { errMessage }) ;
 	}
 	
+	
+})
+
+
+router.get("/account/address" , ensureAuthenticated , (req, res) => {
+	
+	const { firstname , lastname , email , housenumber , region , city , userType } = req.user ;
+	
+	const User = {
+		firstname 
+		, lastname 
+		, email 
+		, housenumber 
+		, region 
+		, city
+		, userType
+	}
+	
+	res.render("account-address" , {
+		User
+	}) ;
+	
+})
+
+
+// ADDRESS EDIT ;
+
+router.get("/account/address" , ensureAuthenticated ,  async (req, res) => {
+	// CHANGING ONLY HOUSE ADDRESS :: WOULD EDIT THE REST ;
+	
+	const { housenumber	} = req.body ;
+	const { _id	} = req.user ;
+	
+	console.log(housenumber) ;
+	
+	try {
+		await User.updateOne({_id: _id} , {
+			housenumber : housenumber
+		} , (err , next) => {
+			if (err)
+				throw err 
+			else next
+			
+		})
+	}
+	catch(err) {
+		throw `Error Here ${err} ` ;
+	}
+	finally {
+		res.redirect("/account/address") ;
+	}
 	
 })
 
