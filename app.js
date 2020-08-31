@@ -17,8 +17,10 @@ const app = express();
 require('./config/passport')(passport);
 
 // DB Connection
-const db = require('./config/keys').mongoURI;
+// const db = require('./config/keys').mongoURI;
 
+// LOCALHOST VERSION WHEN PUSHING TO THEP PUBLIC REPO ;
+const db = "mongodb://localhost:27017/fabra" 
 
 mongoose.connect(db,{ useNewUrlParser: true , useUnifiedTopology: true })
   .then(() => console.log('Database Connected'))
@@ -64,6 +66,7 @@ app.use((req, res, next) => {
 
 // Routes
 app.use('/', require('./routes/index.js'));
+app.use('/', require('./routes/account.js'));
 app.use('/users', require('./routes/users.js'));
 
 

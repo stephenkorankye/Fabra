@@ -51,7 +51,7 @@
           <li ><span><a href="#">My Favourite Shops</a><span class="sub-menu-toggle"></span></span>
             
           </li>
-          <li><span><a href="#">My Cart History</a><span class="sub-menu-toggle"></span></span>
+          <li><span><a href="/dashboard/<%=User.firstname + User.lastname%>/cart">My Cart History</a><span class="sub-menu-toggle"></span></span>
             
           </li>
         </ul>
@@ -95,7 +95,7 @@
           <li ><span><a href="#">My Favourite Shops</a><span class="sub-menu-toggle"></span></span>
             
           </li>
-          <li><span><a href="#">My Cart History</a><span class="sub-menu-toggle"></span></span>
+          <li><span><a href="/dashboard/<%=User.firstname + User.lastname%>/cart">My Cart History</a><span class="sub-menu-toggle"></span></span>
             
           </li>
         </ul>
@@ -155,7 +155,7 @@
                 <li><a href="/users/logout"> <i class="icon-unlock"></i>Logout</a></li>
               </ul>
             </div>
-            <div class="cart"><a href="#"></a><i class="icon-bag"></i><span class="count">3</span><span class="subtotal">GHC289.68</span>
+            <div class="cart"><a href="/dashboard/<%=User.firstname + User.lastname%>/cart"></a><i class="icon-bag"></i><span class="count">3</span><span class="subtotal">GHC289.68</span>
               <div class="toolbar-dropdown">
                 <div class="dropdown-product-item"><span class="dropdown-product-remove"><i class="icon-cross"></i></span><a class="dropdown-product-thumb" href="#"><img src="img/cart-dropdown/01.jpg" alt="Product"></a>
                   <div class="dropdown-product-info"><a class="dropdown-product-title" href="#">Unionbay Park</a><span class="dropdown-product-details">1 x GHC43.90</span></div>
@@ -171,7 +171,7 @@
                   <div class="column text-right"><span class="text-lg text-medium">GHC289.68&nbsp;</span></div>
                 </div>
                 <div class="toolbar-dropdown-group">
-                  <div class="column"><a class="btn btn-sm btn-block btn-secondary" href="#">View Cart</a></div>
+                  <div class="column"><a class="btn btn-sm btn-block btn-secondary" href="/dashboard/<%=User.firstname + User.lastname%>/cart">View Cart</a></div>
                   <div class="column"><a class="btn btn-sm btn-block btn-primary" href="#">Checkout</a></div>
                 </div>
               </div>
@@ -199,7 +199,7 @@
                 <div class="info-label" data-toggle="tooltip" title="Customer"> <%= User.userType %> </div>
               </div>
               <div class="user-info">
-                <div class="user-avatar"><a class="edit-avatar" href="#"></a><img src="img/account/user-ava.jpg" alt="User"></div>
+                <div class="user-avatar"><a class="edit-avatar" href="#"></a><img src="/img/account/user-ava.jpg" alt="User"></div>
                 <div class="user-data">
                   <h4> <%= User.firstname + " " +  User.lastname %> </h4><span> Joined <%= new Date().getFullYear() %> <!-- WOULD CHANGE THIS LATER -->  </span>
                 </div>

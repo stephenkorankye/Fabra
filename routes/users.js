@@ -45,17 +45,16 @@ function checkFileType(file, cb){
 }
 
 
-// Login Page
 router.get('/login', forwardAuthenticated, (req, res) => {
 	res.render('login') 
 });
 
 
-// Register Page
 router.get('/register', (req, res) => res.render('signup'));
 
 
-// Registering a new user
+// SETTING UP A NEW USER ;
+
 router.post('/register', (req, res, next) => {
 	let errors = [];
 	

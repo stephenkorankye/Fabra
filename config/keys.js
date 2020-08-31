@@ -1,7 +1,9 @@
 //////\\//\\//\\//	::EXCESSIVE::	\\/\/\/\/\/\\\///\\/\/// 
 
+// Key taken off when pushing to the public repo ;
 
 module.exports = {
-    mongoURI: "mongodb+srv://Stephen:passwordHere@fabra-dysrw.mongodb.net/test?retryWrites=true&w=majority"
+    mongoURI: "ATLAS KEY HERE" 
 };
+
 
